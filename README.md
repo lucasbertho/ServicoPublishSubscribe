@@ -15,23 +15,35 @@ Docker (testado com 2.3.0.4, pode suportar outras versões)
 ## Instruções
 
 1 - Clonar o repositório  
+```shell
 git clone https://github.com/lucasbertho/ServicoPublishSubscribe.git  
 cd ServicoPublishSubscribe
+```
 
 2 - Criar o container do projeto  
+```shell
 docker build -t servicopublishsubscribe:1.0 .  
+```
 
 3 - Executar o container do RabbitMQ  
+```shell
 docker run -d --hostname rabbitserver --name rabbitmq-server -p 15672:15672 -p 5672:5672 rabbitmq:3-management  
+```
 
 4 - Iniciar o container do projeto  
+```shell
 docker run -it --rm -d --network="host" --name sps servicopublishsubscribe:1.0  
+```
 
 5 - Visualizar log do container  
+```shell
 docker logs -f sps  
+```
   
 6 - Criar instâncias adicionais do serviço (opcional)  
+```shell
 docker run -it --rm -d --network="host" servicopublishsubscribe:1.0  
+```
 
 ## Execução
 

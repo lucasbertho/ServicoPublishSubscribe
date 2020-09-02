@@ -9,36 +9,36 @@ Maiores informações sobre este padrão podem ser obtidas através da Wikipedia
 
 ## Requisitos
 
-.NET Core Runtime 3.1 ou superior
+.NET Core Runtime 3.1 ou superior\
 Docker (testado com 2.3.0.4, pode suportar outras versões)
 
 ## Instruções
 
-1 - Clonar o repositório
-git clone https://github.com/lucasbertho/ServicoPublishSubscribe.git
+1 - Clonar o repositório\
+git clone https://github.com/lucasbertho/ServicoPublishSubscribe.git\
 cd ServicoPublishSubscribe
 
-2 - Criar o container do projeto
-docker build -t servicopublishsubscribe:1.0 .
+2 - Criar o container do projeto\
+docker build -t servicopublishsubscribe:1.0 .\
 
-3 - Executar o container do RabbitMQ
-docker run -d --hostname rabbitserver --name rabbitmq-server -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+3 - Executar o container do RabbitMQ\
+docker run -d --hostname rabbitserver --name rabbitmq-server -p 15672:15672 -p 5672:5672 rabbitmq:3-management\
 
-4 - Iniciar o container do projeto
-docker run -it --rm -d --network="host" --name sps servicopublishsubscribe:1.0
+4 - Iniciar o container do projeto\
+docker run -it --rm -d --network="host" --name sps servicopublishsubscribe:1.0\
 
-5 - Visualizar log do container
-docker logs -f sps
+5 - Visualizar log do container\
+docker logs -f sps\
   
-6 - Criar instâncias adicionais do serviço (opcional)
-docker run -it --rm -d --network="host" servicopublishsubscribe:1.0
+6 - Criar instâncias adicionais do serviço (opcional)\
+docker run -it --rm -d --network="host" servicopublishsubscribe:1.0\
 
 ## Execução
 
-1 - RabbitMQ
-O painel do RabbitMQ pode ser acessado através do endereço local através da porta 15672, assumindo que o container está sendo executado conforme as instruções acima.
+1 - RabbitMQ\
+O painel do RabbitMQ pode ser acessado através do endereço local através da porta 15672, assumindo que o container está sendo executado conforme as instruções acima.\
 
-http://127.0.0.1:15672/
-Usuário: guest
-Senha: guest
+http://127.0.0.1:15672/\
+Usuário: guest\
+Senha: guest\
 

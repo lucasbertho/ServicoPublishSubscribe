@@ -15,7 +15,7 @@ Docker (testado com 2.3.0.4, pode suportar outras versões)
 ## Instruções
 
 1 - Clonar o repositório\
-git clone https://github.com/lucasbertho/ServicoPublishSubscribe.git
+git clone https://github.com/lucasbertho/ServicoPublishSubscribe.git\
 cd ServicoPublishSubscribe
 
 2 - Criar o container do projeto\

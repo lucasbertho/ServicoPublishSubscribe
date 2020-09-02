@@ -48,7 +48,7 @@ docker run -it --rm -d --network="host" servicopublishsubscribe:1.0
 ## Execução
 
 1 - RabbitMQ  
-O painel do RabbitMQ pode ser acessado através do endereço local através da porta 15672, assumindo que o container está sendo executado conforme as instruções acima.  
+O painel do RabbitMQ pode ser acessado no endereço local através da porta 15672, assumindo que o container está sendo executado conforme as instruções acima.  
 
 http://127.0.0.1:15672/  
 Usuário: guest  
